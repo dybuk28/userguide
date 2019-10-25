@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE topic PUBLIC "-//OASIS//DTD DITA Topic//EN" "topic.dtd">
 <topic id="wa-vpat">
-  <title>VPAT Accessibility Conformance Report</title>
+  <title>Web Author VPAT Accessibility Conformance Report</title>
   <body>
     <bodydiv>
       <section id="section_dmh_t1c_fhb">
@@ -42,7 +42,7 @@
                   />:</p>
                 <p>
                   <ul id="ul_hwl_jlb_hhb">
-                    <li>Desktop browsers: Chrome, Firefox, Safari, Edge And Internet Explorer</li>
+                    <li>Desktop browsers: Chrome, Firefox, Safari, Edge, and Internet Explorer</li>
                     <li>Assistive technologies: NVDA, VoiceOver, JAWS, Microsoft Narrator</li>
                   </ul>
                 </p>
@@ -53,7 +53,7 @@
       <section id="section_emh_t1c_fhb">
         <title>Applicable Standards/Guidelines</title>
         <p>This report covers the degree of conformance for the following accessibility
-          standard/guidelines:</p>
+          standards/guidelines:</p>
         <p>
           <table frame="all" id="simpletable_ep1_x2d_fhb" colsep="1" rowsep="1">
             <tgroup cols="2">
@@ -89,11 +89,18 @@
                   </entry>
                   <entry>Yes</entry>
                 </row>
-                <!--<strow audience="eu-rules"><stentry><p><xref href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf" format="html" scope="external">EN 301 549 Accessibility requirements suitable for public procurement of ICT products and services in Europe</xref>, - V2.1.2 (2018-08)</p></stentry><stentry><?oxy_comment_start author="andrei_popa" timestamp="20190401T184401+0300" comment="TODO: check this link if we don&apos;t remove this standard completely."?>Yes<?oxy_comment_end?></stentry></strow>-->
+                <row>
+                  <entry><xref
+                      href="https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf"
+                      format="pdf" scope="external">EN 301 549 Accessibility requirements suitable
+                      for public procurement of ICT products and services in Europe - V2.1.2
+                      (2018-08)</xref></entry>
+                  <entry>No</entry>
+                </row>
               </tbody>
             </tgroup>
           </table>
-          <?oxy_comment_start author="steven_higgs" timestamp="20190524T152939+0300" comment="I will untoggle all the EU things in this document when the Eurpean Union compliance is implemented."?>
+          <?oxy_comment_start author="steven_higgs" timestamp="20190524T152939+0300" comment="I will untoggle all the EU things in this document when the European Union compliance is implemented."?>
         </p>
       </section>
     </bodydiv><?oxy_comment_end?>
@@ -497,7 +504,7 @@ quote: If keyboard focus appears to be trapped in any of the content, check that
                   </ul>
                 </entry>
                 <entry>Supports</entry>
-                <entry><ph keyref="no-flashing-lights"/></entry>
+                <entry>The product does not contain flashing content.</entry>
               </row>
               <row>
                 <entry>
@@ -977,9 +984,8 @@ The content is implemented using technologies with support for identifying the e
               <row>
                 <entry>
                   <p><u><xref href="http://www.w3.org/TR/WCAG20/#visual-audio-contrast-scale"
-                        format="html" scope="external"><b>1.4.4 Resize text</b></xref></u>
-                    (<?oxy_comment_start author="andrei_popa" timestamp="20190326T191300+0200" comment="Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality."?>Level
-                    AA<?oxy_comment_end?>)</p>
+                        format="html" scope="external"><b>1.4.4 Resize text</b></xref></u> (Level
+                    AA)</p>
                   <p> Also applies to:</p>
                   <!--<p audience="eu-rules"> EN 301 549 Criteria</p>-->
                   <!--<ul id="ul_vsk_chl_fhb" audience="eu-rules"><li><p> 9.1.4.4 (Web)</p></li><li><p> 10.1.4.4 (Non-web document)</p></li><li><p> 11.1.4.4.1 (Open Functionality Software)</p></li><li><p> 11.1.4.4.2 (Closed Software)</p></li></ul>-->
@@ -992,10 +998,9 @@ The content is implemented using technologies with support for identifying the e
                     <li>602.3 (Support Docs)</li>
                   </ul>
                 </entry>
-                <entry>Partially
-                  <?oxy_comment_start author="andrei_popa" timestamp="20190408T185530+0300" comment="TODO: (WA-2971) automated tools say we fail this, because we disable scrolling from the meta element"?>Support<?oxy_comment_end?>ed</entry>
+                <entry>Supports</entry>
                 <entry>Text can be resized up to 200 percent without loss of content or
-                  functionality, however the viewport is not scalable on mobile.</entry>
+                  functionality.</entry>
               </row>
               <row>
                 <entry>
@@ -1748,21 +1753,21 @@ A mechanism is available for reviewing, confirming, and correcting information b
                   <p> 302.4 Without Hearing</p>
                 </entry>
                 <entry>Supports</entry>
-                <entry><ph keyref="no-hearing-required"/></entry>
+                <entry>The product does not require hearing for use.</entry>
               </row>
               <row>
                 <entry>
                   <p> 302.5 With Limited Hearing</p>
                 </entry>
                 <entry>Supports</entry>
-                <entry><ph keyref="no-hearing-required"/></entry>
+                <entry>The product does not require hearing for use.</entry>
               </row>
               <row>
                 <entry>
                   <p> 302.6 Without Speech</p>
                 </entry>
                 <entry>Supports</entry>
-                <entry><ph keyref="no-speech-required"/></entry>
+                <entry>The product does not require speech for use.</entry>
               </row>
               <row>
                 <entry>
@@ -1879,7 +1884,7 @@ Additionally, the UI supports different contrast modes and the status bar shows 
         </table>
       </p>
       <p><b>502.3 Accessibility Services</b></p>
-      <table id="table_rv3_spz_whb" colsep="1" rowsep="1">
+      <table id="table_rv3_spz_whb" colsep="1" rowsep="1" frame="all">
         <tgroup cols="3">
           <colspec colname="c1" colwidth="1.77*"/>
           <colspec colname="c2" colwidth="1.0*"/>
@@ -2181,7 +2186,7 @@ EXCEPTION: Applications that are designed to be isolated from their underlying p
                     Preservation of Information Provided for Accessibility in Format Conversion</p>
                 </entry>
                 <entry>Not Applicable</entry>
-                <entry><ph keyref="no-format-conversion"/></entry>
+                <entry>The product does not provide format conversion.</entry>
               </row>
               <row>
                 <entry>
@@ -2332,14 +2337,14 @@ does not require user perception of colour.
 NOTE: Where significant features of the user interface are colour-coded, the provision of additional methods of
 distinguishing between the features may contribute towards meeting this clause."?>4.2.3<?oxy_comment_end?> Usage without perception of colour</p></stentry><stentry>Supports</stentry><stentry><ph keyref="product"/> does not use colour alone to convey information.</stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T174534+0200" comment="Where ICT provides auditory modes of operation, some users need ICT to provide at least one mode of operation that
 does not require hearing.
-NOTE: Visual and tactile user interfaces may contribute towards meeting this clause"?>4.2.4<?oxy_comment_end?> Usage without hearing</p></stentry><stentry>Supports</stentry><stentry><ph keyref="no-hearing-required"/></stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T174622+0200" comment="Where ICT provides auditory modes of operation, some users will need the ICT to provide enhanced audio features.
+NOTE: Visual and tactile user interfaces may contribute towards meeting this clause"?>4.2.4<?oxy_comment_end?> Usage without hearing</p></stentry><stentry>Supports</stentry><stentry>The product does not require hearing for use.</stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T174622+0200" comment="Where ICT provides auditory modes of operation, some users will need the ICT to provide enhanced audio features.
 NOTE 1: Enhancement of the audio clarity, reduction of background noise, increased range of volume and greater
 volume in the higher frequency range can contribute towards meeting this clause.
-NOTE 2: Users with limited hearing may also benefit from non-hearing access (see clause 4.2.4)."?>4.2.5<?oxy_comment_end?> Usage with limited hearing</p></stentry><stentry>Supports</stentry><stentry><ph keyref="no-hearing-required"/></stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T174701+0200" comment="Where ICT requires vocal input from users, some users will need the ICT to provide at least one mode of operation that
+NOTE 2: Users with limited hearing may also benefit from non-hearing access (see clause 4.2.4)."?>4.2.5<?oxy_comment_end?> Usage with limited hearing</p></stentry><stentry>Supports</stentry><stentry>The product does not require hearing for use.</stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T174701+0200" comment="Where ICT requires vocal input from users, some users will need the ICT to provide at least one mode of operation that
 does not require them to generate vocal output.
 NOTE 1: This clause covers the alternatives to the use of orally-generated sounds, including speech, whistles,
 clicks, etc.
-NOTE 2: Keyboard, pen or touch user interfaces may contribute towards meeting this clause."?>4.2.6<?oxy_comment_end?> Usage without vocal capability</p></stentry><stentry>Supports</stentry><stentry><ph keyref="no-speech-required"/></stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T174817+0200" comment="Where ICT requires manual actions, some users will need the ICT to provide features that enable users to make use of
+NOTE 2: Keyboard, pen or touch user interfaces may contribute towards meeting this clause."?>4.2.6<?oxy_comment_end?> Usage without vocal capability</p></stentry><stentry>Supports</stentry><stentry>The product does not require speech for use.</stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T174817+0200" comment="Where ICT requires manual actions, some users will need the ICT to provide features that enable users to make use of
 the ICT through alternative actions not requiring manipulation or hand strength.
 NOTE 1: Examples of operations that users may not be able to perform include those that require fine motor
 control, path dependant gestures, pinching, twisting of the wrist, tight grasping, or simultaneous manual
@@ -2352,7 +2357,7 @@ meeting this clause."?>4.2.7<?oxy_comment_end?> Usage with limited manipulation 
 NOTE: Considering the needs of wheelchair users and the range of user statures in the placing of operational
 elements of the user interface may contribute towards meeting this clause."?>4.2.8<?oxy_comment_end?> Usage with limited reach</p></stentry><stentry>Supports</stentry><stentry>The product does not require reach for use.</stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T175104+0200" comment="Where ICT provides visual modes of operation, some users need ICT to provide at least one mode of operation that
 minimizes the potential for triggering photosensitive seizures.
-NOTE: Limiting the area and number of flashes per second may contribute towards meeting this clause."?>4.2.9<?oxy_comment_end?> Minimize photosensitive seizure triggers</p></stentry><stentry>Supports</stentry><stentry><ph keyref="no-flashing-lights"/></stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T175156+0200" comment="Some users will need the ICT to provide features that make it simpler and easier to use.
+NOTE: Limiting the area and number of flashes per second may contribute towards meeting this clause."?>4.2.9<?oxy_comment_end?> Minimize photosensitive seizure triggers</p></stentry><stentry>Supports</stentry><stentry>The product does not contain flashing content.</stentry></strow><strow><stentry><p><?oxy_comment_start author="andrei_popa" timestamp="20190328T175156+0200" comment="Some users will need the ICT to provide features that make it simpler and easier to use.
 NOTE 1: This clause is intended to include the needs of persons with limited cognitive, language and learning
 abilities.
 NOTE 2: Adjustable timings, error indication and suggestion, and a logical focus order are examples of design
@@ -2361,7 +2366,7 @@ when using those ICT features that are provided for accessibility.
 NOTE: Enabling the connection of personal headsets for private listening, not providing a spoken version of
 characters being masked and enabling user control of legal, financial and personal data are examples of
 design features that may contribute towards meeting this clause."?>4.2.11<?oxy_comment_end?> Privacy</p></stentry><stentry>Supports</stentry><stentry>The product does not require legal, financial, or personal information.</stentry></strow></simpletable></p></section>-->
-    <!--<section audience="eu-rules"><title><b><b>Chapter </b><u><xref href="http://www.etsi.org/deliver/etsi_en/301500_301599/301549/01.01.02_60/en_301549v010102p.pdf#page=23" format="html" scope="external">5: Generic Requirements</xref></u></b></title><p>Notes:</p><p><simpletable frame="all" relcolwidth="1.75* 1.0* 1.58*" id="simpletable_vxz_qlz_fhb"><sthead><stentry>Criteria</stentry><stentry>Conformance Level</stentry><stentry>Remarks and Explanations</stentry></sthead><strow><stentry>5.1 Closed functionality</stentry><stentry>Not Applicable</stentry><stentry>5.1.2.2-5.1.6.2 are not applicable for this product.</stentry></strow><strow><stentry><p>5.2 Activation of accessibility features</p></stentry><stentry>Supports</stentry><stentry>Accessibility features related to a need can be activated without relying on that need.</stentry></strow><strow><stentry><p>5.3 Biometrics</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not rely on biological characteristics.</stentry></strow><strow><stentry><p>5.4 Preservation of accessibility information during conversion</p></stentry><stentry>Not Applicable</stentry><stentry> <ph keyref="no-format-conversion"/></stentry></strow><strow><stentry><p>5.5.1 Means of operation</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not contain operable parts.</stentry></strow><strow><stentry><p>5.5.2 Operable parts discernibility</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not contain operable parts.</stentry></strow><strow><stentry><p>5.6.1 Tactile or auditory status</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not contain locking or toggle controls.</stentry></strow><strow><stentry><p>5.6.2 Visual status</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not contain locking or toggle controls.</stentry></strow><strow><stentry><p>5.7 Key repeat</p></stentry><stentry>Not Applicable</stentry><stentry>The product relies on platform software to supply key repeat functionality.</stentry></strow><strow><stentry><p>5.8 Double-strike key acceptance</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not provide a keyboard or keypad.</stentry></strow><strow><stentry><p>5.9 Simultaneous user actions</p></stentry><stentry>Supports</stentry><stentry>The product relies on platform software features, such as Sticky Keys, to ensure simultaneous user actions are not required.</stentry></strow></simpletable></p></section>-->
+    <!--<section audience="eu-rules"><title><b><b>Chapter </b><u><xref href="http://www.etsi.org/deliver/etsi_en/301500_301599/301549/01.01.02_60/en_301549v010102p.pdf#page=23" format="html" scope="external">5: Generic Requirements</xref></u></b></title><p>Notes:</p><p><simpletable frame="all" relcolwidth="1.75* 1.0* 1.58*" id="simpletable_vxz_qlz_fhb"><sthead><stentry>Criteria</stentry><stentry>Conformance Level</stentry><stentry>Remarks and Explanations</stentry></sthead><strow><stentry>5.1 Closed functionality</stentry><stentry>Not Applicable</stentry><stentry>5.1.2.2-5.1.6.2 are not applicable for this product.</stentry></strow><strow><stentry><p>5.2 Activation of accessibility features</p></stentry><stentry>Supports</stentry><stentry>Accessibility features related to a need can be activated without relying on that need.</stentry></strow><strow><stentry><p>5.3 Biometrics</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not rely on biological characteristics.</stentry></strow><strow><stentry><p>5.4 Preservation of accessibility information during conversion</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not provide format conversion.</stentry></strow><strow><stentry><p>5.5.1 Means of operation</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not contain operable parts.</stentry></strow><strow><stentry><p>5.5.2 Operable parts discernibility</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not contain operable parts.</stentry></strow><strow><stentry><p>5.6.1 Tactile or auditory status</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not contain locking or toggle controls.</stentry></strow><strow><stentry><p>5.6.2 Visual status</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not contain locking or toggle controls.</stentry></strow><strow><stentry><p>5.7 Key repeat</p></stentry><stentry>Not Applicable</stentry><stentry>The product relies on platform software to supply key repeat functionality.</stentry></strow><strow><stentry><p>5.8 Double-strike key acceptance</p></stentry><stentry>Not Applicable</stentry><stentry>The product does not provide a keyboard or keypad.</stentry></strow><strow><stentry><p>5.9 Simultaneous user actions</p></stentry><stentry>Supports</stentry><stentry>The product relies on platform software features, such as Sticky Keys, to ensure simultaneous user actions are not required.</stentry></strow></simpletable></p></section>-->
     <!--<section id="section_jdh_qsz_fhb" audience="eu-rules"><title><b>Chapter </b><u><xref href="http://www.etsi.org/deliver/etsi_en/301500_301599/301549/01.01.02_60/en_301549v010102p.pdf#page=28" format="html" scope="external">6: ICT with Two-Way Voice Communication</xref></u></title><p>Notes: Not Applicable</p></section>-->
     <!--<section id="section_jwp_rsz_fhb" audience="eu-rules"><title>Chapter <u><xref href="http://www.etsi.org/deliver/etsi_en/301500_301599/301549/01.01.02_60/en_301549v010102p.pdf#page=31" format="html" scope="external">7: ICT with Video Capabilities</xref></u></title><p>Notes: Not Applicable</p></section>-->
     <!--<section id="section_uxq_tsz_fhb" audience="eu-rules"><title>Chapter <u><xref href="http://www.etsi.org/deliver/etsi_en/301500_301599/301549/01.01.02_60/en_301549v010102p.pdf#page=32" format="html" scope="external">8: Hardware</xref></u></title><p>Notes: Not Applicable</p></section>-->

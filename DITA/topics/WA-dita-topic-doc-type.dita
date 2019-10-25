@@ -29,6 +29,101 @@
         </fig>
       </p>
     </section>
+    <section id="section_fhc_5qd_3jb">
+      <title>DITA Map View</title>
+      <p><ph keyref="webappProduct"/> includes a <uicontrol>DITA Map</uicontrol> view that presents
+        a <term>DITA map</term> as a hierarchical tree. To open the view, click the
+            <uicontrol><image href="../img/DitamapIcon16.png" id="image_gfb_c1f_3jb"/>Show DITA Map
+          View</uicontrol> toolbar button with a DITA topic opened in the editor. <ph
+          keyref="webappProduct"/> will automatically try to find the <term>root DITA map</term> for
+        the current document based upon recent history. If this is the first time the DITA topic has
+        been opened in Web Author or you want to change the map, you can use the browsing tool
+          (<image href="../img/Open16.png" id="image_uvf_f1f_3jb"/>) at the top of the view to
+        select a new map.<ph product="waCustom"> You can also specify the root map by using the
+            <xref
+            href="webauthor-integrate-embedded-launch.dita#webauthor-integrate-embedded-launch/url_parameters"
+                ><b><i>ditamap</i></b> URL parameter</xref>.</ph></p>
+      <p>The name of the current DITA map is displayed in the gray stripe at the top of the view.
+        The current map is also used to resolve the keys and references found in the current
+        document opened in the editor.</p>
+      <p>You can double-click (or single-tap on mobile devices) on the root map or any of the topics
+        or submaps within its hierarchy to open the document in current browser tab. The documents
+        are loaded in the main editing pane without reloading the entire web page. You can also
+        select an item and press <uicontrol><shortcut>Enter</shortcut></uicontrol> to open it in the
+        main editor (<uicontrol><shortcut>Ctrl + Double-Click</shortcut></uicontrol> or
+            <uicontrol><shortcut>Ctrl + Enter</shortcut></uicontrol> opens the document in a new
+        browser tab).</p>
+      <p>You can also drag items (such as topic references or key definitions) from the
+          <uicontrol>DITA Map</uicontrol> view and drop them in the document opened in the editor to
+        insert a reference to the dragged item.</p>
+      <p>
+        <fig id="fig_olq_w1f_3jb">
+          <title>DITA Map View</title>
+          <image href="../img/wa-dita-map-view.png" id="image_ymh_y1f_3jb"/>
+        </fig>
+      </p>
+    </section>
+    <section id="section_g45_4ls_3jb">
+      <title>DITA Key Scopes</title>
+      <p><ph keyref="webappProduct"/> supports key scopes. It allows you to reuse a topic in
+        multiple places within the same <term>DITA map</term>, but with slightly different content
+        in each instance. In Web Author, when opening a topic from the <uicontrol>DITA
+          Map</uicontrol> view or directly from a DITA map opened in the editor, keys in that topic
+        will be resolved taking the key scopes of the location for the particular topic reference
+        into account.<ph product="waCustom">
+          <ph keyref="webappProduct"/> also supports a <xref
+            href="webauthor-integrate-embedded-launch.dita#webauthor-integrate-embedded-launch/url_parameters"
+              ><b>KeyscopeStack</b> URL parameter</xref>.</ph></p>
+    </section>
+    <section id="dita_validation">
+      <title>DITA Validation</title>
+      <p><ph keyref="webappProduct"/> automatically validates DITA documents as you type and
+        presents warning messages in the <i>Validation</i> panel on the right side of the screen.
+        Many of the DITA validation issues that are detected also include Quick Fix proposals to
+        help you solve the problems.<ph product="webauthor"> For more information about the
+          validation support, see <xref href="checking-for-errors.dita"/>.</ph></p>
+      <p>
+        <fig>
+          <title>Validation</title>
+          <image href="../img/wa-dita-img3.png"/>
+        </fig>
+      </p>
+    </section>
+    <section id="dita_content_completion">
+      <title>DITA Content Completion</title>
+      <p><ph keyref="webappProduct"/> includes an inline content completion assistant to help you
+        insert and manage DITA markup without having to take your fingers off the keyboard. By
+        default, it appears when you press the <uicontrol><shortcut>Enter</shortcut></uicontrol> key
+        and it offers proposals that are valid at the current location within the DITA document with
+        the most logical choices listed first. Most proposals also include a description to help you
+        understand exactly what the particular selection will do.</p>
+      <p>
+        <fig>
+          <title>Content Completion Assistant</title>
+          <image href="../img/wa-dita-img4.png"/>
+        </fig>
+      </p>
+    </section>
+    <section id="dita_css_styles">
+      <title>DITA CSS Styles</title>
+      <p><ph keyref="webappProduct"/> has an option to adjust the rendering of documents simply by
+        choosing from various styles. Each style is based on a corresponding CSS file stored in the
+        built-in DITA framework. There are numerous different styles available for DITA documents.
+        You can choose one main style and multiple additional styles that act as layers, with
+        choices such as switching to a full width mode, a print preview mode, or adding inline hints
+        to help you understand the type of content that is expected within the DITA structure.</p>
+      <p>To select a CSS style, select <uicontrol>Choose style</uicontrol> from the
+            <uicontrol><image href="../img/WebappMore18.png"/>More drop-down menu</uicontrol>. This
+        opens a dialog box where you can select a <term>main css style</term> that applies to the
+        whole document and one or more <term>alternate css styles</term> that behave like layers and
+        are merged sequentially with the <term>main style</term>.</p>
+      <p>
+        <fig>
+          <title>Choose Style Dialog Box</title>
+          <image href="../img/wa-dita-img5.png"/>
+        </fig>
+      </p>
+    </section>
     <section id="dita-toolbar-actions-section">
       <title>DITA Toolbar Actions</title>
       <p>The following default actions are readily available on the <uicontrol>DITA</uicontrol>
@@ -36,28 +131,33 @@
       <p>
         <dl>
           <dlentry>
-            <dt><uicontrol><image href="../img/DitamapIcon16.png"/>Choose Root DITA
-              Map</uicontrol></dt>
-            <dd>Opens a dialog box where you can enter a URL for the <term>root DITA map</term> that
-              you want to be associated with the current document.<note>If the root DITA map
-                contains a subject scheme, the <uicontrol>Attributes</uicontrol> panel provides
-                proposals for attribute values according to the definitions in the subject scheme
-                map.</note></dd>
+            <dt><uicontrol><image href="../img/DitamapIcon16.png" id="image_sks_qqd_3jb"/>Show DITA
+                Map View</uicontrol></dt>
+            <dd>Opens a DITA Map view on the left side of the screen that presents a <term>DITA
+                map</term> in a hierarchical tree-like manner. <ph keyref="webappProduct"/> will
+              automatically try to find the <term>root DITA map</term> for the current document
+              based upon recent history.<ph product="waCustom"> You can also specify the root map
+                using the browsing tool (<image href="../img/Open16.png" id="image_pk5_ry2_3jb"/>)
+                at the top of the view or by using the <xref
+                  href="webauthor-integrate-embedded-launch.dita#webauthor-integrate-embedded-launch/url_parameters"
+                    ><i>ditamap</i> URL parameter</xref>.</ph><note>If the root DITA map contains a
+                subject scheme, the <uicontrol>Attributes</uicontrol> panel provides proposals for
+                attribute values according to the definitions in the subject scheme map.</note></dd>
           </dlentry>
           <dlentry id="bold-dlentry">
             <dt><uicontrol><image href="../img/Bold16.gif" id="image_tys_tjx_sr"
               />Bold</uicontrol></dt>
-            <dd>Surrounds the selected text with a <codeph>b</codeph> (bold) tag.</dd>
+            <dd>Surrounds the selected text with a <xmlelement>b</xmlelement> (bold) tag.</dd>
           </dlentry>
           <dlentry id="italic-dlentry">
             <dt><uicontrol><image href="../img/Italic16.png" id="image_kbn_3xx_sr"
                 />Italic</uicontrol></dt>
-            <dd>Surrounds the selected text with an <codeph>i</codeph> (italic) tag.</dd>
+            <dd>Surrounds the selected text with an <xmlelement>i</xmlelement> (italic) tag.</dd>
           </dlentry>
           <dlentry id="underline-dlentry">
             <dt><uicontrol><image href="../img/Underline16.gif" id="image_hr3_vxx_sr"
                 />Underline</uicontrol></dt>
-            <dd>Surrounds the selected text with a <codeph>u</codeph> (underline) tag.</dd>
+            <dd>Surrounds the selected text with a <xmlelement>u</xmlelement> (underline) tag.</dd>
           </dlentry>
           <dlentry>
             <dt><uicontrol><image href="../img/LinkDrop.png" id="image_rng_tkx_sr"/>Link</uicontrol>
@@ -86,7 +186,9 @@
           <dlentry>
             <dt><uicontrol><image href="../img/InsertSectionDrop.png" id="image_i2d_31z_tr"/>Insert
                 Section</uicontrol> Drop-Down Menu</dt>
-            <dd>The following insert actions are available from this menu:<p>
+            <dd>
+              <p>The following insert actions are available from this menu:</p>
+              <p>
                 <dl>
                   <dlentry conkeyref="reusables-webapp/insert-section">
                     <dt/>
@@ -109,22 +211,23 @@
                     <dd/>
                   </dlentry>
                 </dl>
-              </p></dd>
+              </p>
+            </dd>
           </dlentry>
           <dlentry conkeyref="reusables-webapp/insert-paragraph">
             <dt/>
             <dd/>
           </dlentry>
           <dlentry>
-            <dt><uicontrol><image href="../img/DITAReusableComponents16.png"/>DITA
-              Keys</uicontrol></dt>
+            <dt><uicontrol><image href="../img/DITAReusableComponents16.png" id="image_tks_qqd_3jb"
+                />DITA Keys</uicontrol></dt>
             <dd>Opens a dialog box where all the keys defined in the current DITA map are collected.
               You can filter the list or search for a specific key and you can insert links to
               topics defined with a key or insert variables defined with a key. If the selected key
-              is defined point to an <codeph>href</codeph> value, it is inserted as a cross
-              reference link (<i>xref</i>). If the selected key is defined with a
-                <codeph>keyword</codeph> value, it is inserted as a variable reference
-              (<i>ph</i>).</dd>
+              is defined point to an <xmlatt>href</xmlatt> value, it is inserted as a cross
+              reference link (<xmlelement>xref</xmlelement>). If the selected key is defined with a
+                <xmlelement>keyword</xmlelement> value, it is inserted as a variable reference
+                (<xmlelement>ph</xmlelement>).</dd>
           </dlentry>
           <dlentry conkeyref="reusables-webapp/reuse-content">
             <dt/>
@@ -136,15 +239,15 @@
             <dd>Inserts a new list or step item in the current list type.</dd>
           </dlentry>
           <dlentry>
-            <dt><uicontrol><image href="../img/UnorderedList16.png"/>Insert Unordered
-                List</uicontrol></dt>
+            <dt><uicontrol><image href="../img/UnorderedList16.png" id="image_uks_qqd_3jb"/>Insert
+                Unordered List</uicontrol></dt>
             <dd>Inserts an unordered list at the cursor position. A child list item is also
               automatically inserted by default. You can also use this action to convert selected
               paragraphs or other types of lists to an unordered list.</dd>
           </dlentry>
           <dlentry>
-            <dt><uicontrol><image href="../img/OrderedList16.png"/>Insert Ordered
-              List</uicontrol></dt>
+            <dt><uicontrol><image href="../img/OrderedList16.png" id="image_vks_qqd_3jb"/>Insert
+                Ordered List</uicontrol></dt>
             <dd>Inserts an ordered list at the cursor position. A child list item is also
               automatically inserted by default. You can also use this action to convert selected
               paragraphs or other types of lists to an ordered list.</dd>
@@ -222,16 +325,18 @@
               destinations.</dd>
           </dlentry>
           <dlentry>
-            <dt><uicontrol><image href="../img/Table16.png"/>Table</uicontrol> submenu (Available
-              when invoked on a table)</dt>
+            <dt><uicontrol><image href="../img/Table16.png" id="image_qw5_sqd_3jb"
+                />Table</uicontrol> submenu (Available when invoked on a table)</dt>
             <dd>Presents various actions for configuring the table, such as adding or deleting rows
               and columns, joining or splitting cells, and converting from a CALS table to a Simple
               table (and vice versa).</dd>
           </dlentry>
           <dlentry id="insert-submenu">
             <dt><uicontrol>Insert</uicontrol> submenu</dt>
-            <dd>This submenu includes the following insert actions that are specific to the DITA
-                <term>framework</term>:<p>
+            <dd>
+              <p>This submenu includes the following insert actions that are specific to the DITA
+                  <term>framework</term>:</p>
+              <p>
                 <dl>
                   <dlentry conkeyref="reusables-webapp/insert-table">
                     <dt/>
@@ -242,14 +347,14 @@
                     <dd/>
                   </dlentry>
                   <dlentry>
-                    <dt><uicontrol><image href="../img/Equation16.gif"/>Insert
-                      Equation</uicontrol></dt>
+                    <dt><uicontrol><image href="../img/Equation16.gif" id="image_rw5_sqd_3jb"
+                        />Insert Equation</uicontrol></dt>
                     <dd>Inserts a MathML equation. Clicking on the equation will open a
                         <uicontrol>MathML Editor</uicontrol> where you can edit the code.</dd>
                   </dlentry>
                   <dlentry>
-                    <dt><uicontrol><image href="../img/Paragraph16.png"/>Insert
-                        Paragraph</uicontrol></dt>
+                    <dt><uicontrol><image href="../img/Paragraph16.png" id="image_sw5_sqd_3jb"
+                        />Insert Paragraph</uicontrol></dt>
                     <dd>Inserts a new paragraph at current cursor position.</dd>
                   </dlentry>
                   <dlentry conkeyref="reusables-webapp/insert-section">
@@ -273,14 +378,16 @@
                     <dd/>
                   </dlentry>
                 </dl>
-              </p></dd>
+              </p>
+            </dd>
           </dlentry>
           <dlentry conkeyref="reusables-webapp/insert-element">
             <dt/>
             <dd/>
           </dlentry>
           <dlentry>
-            <dt><uicontrol><image href="../img/LinkDrop.png"/>Link</uicontrol> submenu</dt>
+            <dt><uicontrol><image href="../img/LinkDrop.png" id="image_tw5_sqd_3jb"
+                />Link</uicontrol> submenu</dt>
             <dd>
               <p>The following link actions are available from this menu:<dl>
                   <dlentry conkeyref="reusables-webapp/cross-reference">
@@ -304,7 +411,9 @@
           </dlentry>
           <dlentry>
             <dt><uicontrol>Reuse</uicontrol> submenu</dt>
-            <dd>This submenu includes the following actions regarding reusing content in DITA:<p>
+            <dd>
+              <p>This submenu includes the following actions regarding reusing content in DITA:</p>
+              <p>
                 <dl>
                   <dlentry conkeyref="reusables-webapp/reuse-content">
                     <dt/>
@@ -312,25 +421,31 @@
                   </dlentry>
                   <dlentry>
                     <dt><uicontrol>Replace All References with Content</uicontrol></dt>
-                    <dd>Replaces all referenced fragments (<codeph>keyref</codeph>,
-                        <codeph>conref</codeph>, or <codeph>conkeyref</codeph>) in the current
-                      document with the content. Attributes are preserved according to the following priority:<ol>
-                        <li>Attributes from the elements in the current document that reference
-                          other content are preserved except for attributes with a
-                            <codeph>-dita-use-conref-target</codeph> value.</li>
-                        <li>Attributes from the referenced content are brought into the replaced
-                          elements in the current document except for <codeph>id</codeph>
-                          attributes.</li>
-                      </ol><p>For <i>keyrefs</i> inside <codeph>xref</codeph> or
-                          <codeph>link</codeph> elements, the <codeph>keyref</codeph> attribute is
-                        changed to an <codeph>href</codeph> attribute, while the rest of the content
-                        for the <i>keyref</i> is replaced with its source content.</p><p>If the
-                        source content includes references to other topics/resources (<i>hrefs</i>),
-                        the operation also resolves those references relative to the new
-                        location.</p></dd>
+                    <dd>
+                      <p>Replaces all referenced fragments (<xmlatt>keyref</xmlatt>,
+                          <xmlatt>conref</xmlatt>, or <xmlatt>conkeyref</xmlatt>) in the current
+                        document with the content. Attributes are preserved according to the
+                        following priority:<ol id="ol_cr5_hvj_y3b">
+                          <li>Attributes from the elements in the current document that reference
+                            other content are preserved except for attributes with a
+                              <codeph>-dita-use-conref-target</codeph> value.</li>
+                          <li>Attributes from the referenced content are brought into the replaced
+                            elements in the current document except for <xmlatt>id</xmlatt>
+                            attributes.</li>
+                        </ol></p>
+                      <p>For <i>keyrefs</i> inside <xmlelement>xref</xmlelement> or
+                          <xmlelement>link</xmlelement> elements, the <xmlatt>keyref</xmlatt>
+                        attribute is changed to an <xmlatt>href</xmlatt> attribute, while the rest
+                        of the content for the <i>keyref</i> is replaced with its source
+                        content.</p>
+                      <p>If the source content includes references to other topics/resources
+                          (<i>hrefs</i>), the operation also resolves those references relative to
+                        the new location.</p>
+                    </dd>
                   </dlentry>
                 </dl>
-              </p></dd>
+              </p>
+            </dd>
           </dlentry>
           <dlentry conkeyref="reusables-webapp/IX-Paste_special" id="IX-Paste_special">
             <dt/>
@@ -350,7 +465,9 @@
           </dlentry>
           <dlentry>
             <dt><uicontrol>About Element</uicontrol> submenu</dt>
-            <dd>This submenu includes the following actions:<p>
+            <dd>
+              <p>This submenu includes the following actions:</p>
+              <p>
                 <dl>
                   <dlentry>
                     <dt><uicontrol>Style Guide</uicontrol></dt>
@@ -366,57 +483,10 @@
                       cursor position in a web browser.</dd>
                   </dlentry>
                 </dl>
-              </p></dd>
+              </p>
+            </dd>
           </dlentry>
         </dl>
-      </p>
-    </section>
-    <section id="dita_validation">
-      <title>DITA Validation</title>
-      <p><ph keyref="webappProduct"/>automatically validates DITA documents as you type and presents
-        warning messages in the <i>Validation</i> panel on the right side of the screen. Many of the
-        DITA validation issues that are detected also include Quick Fix proposals to help you solve
-        the problems.</p>
-      <p>
-        <fig>
-          <title>Validation</title>
-          <image href="../img/wa-dita-img3.png"/>
-        </fig>
-      </p>
-    </section>
-    <section id="dita_content_completion">
-      <title>DITA Content Completion</title>
-      <p><ph keyref="webappProduct"/> includes an inline content completion assistant to help you
-        insert and manage DITA markup without having to take your fingers off the keyboard. By
-        default, it appears when you press the <uicontrol><shortcut>Enter</shortcut></uicontrol> key
-        and it offers proposals that are valid at the current location within the DITA document with
-        the most logical choices listed first. Most proposals also include a description to help you
-        understand exactly what the particular selection will do.</p>
-      <p>
-        <fig>
-          <title>Content Completion Assistant</title>
-          <image href="../img/wa-dita-img4.png"/>
-        </fig>
-      </p>
-    </section>
-    <section id="dita_css_styles">
-      <title>DITA CSS Styles</title>
-      <p><ph keyref="webappProduct"/> has an option to adjust the rendering of documents simply by
-        choosing from various styles. Each style is based on a corresponding CSS file stored in the
-        built-in DITA framework. There are numerous different styles available for DITA documents.
-        You can choose one main style and multiple additional styles that act as layers, with
-        choices such as switching to a full width mode, a print preview mode, or adding inline hints
-        to help you understand the type of content that is expected within the DITA structure.</p>
-      <p>To select a CSS style, select <uicontrol>Choose style</uicontrol> from the
-            <uicontrol><image href="../img/WebappMore18.png"/>More drop-down menu</uicontrol>. This
-        opens a dialog box where you can select a <term>main css style</term> that applies to the
-        whole document and one or more <term>alternate css styles</term> that behave like layers and
-        are merged sequentially with the <term>main style</term>.</p>
-      <p>
-        <fig>
-          <title>Choose Style Dialog Box</title>
-          <image href="../img/wa-dita-img5.png"/>
-        </fig>
       </p>
     </section>
   </body>
