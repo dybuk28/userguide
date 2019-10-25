@@ -21,15 +21,16 @@
               <term>scheme</term></xref> according to the file storage system the file comes
           from.</li>
         <li>It should behave like an identifier for the file that it references.</li>
-        <li>It is usually different from other URLs identifying the file, such as one that would
-          open it in a CMS web interface (herein called <term>CMS-URL</term>) or the one that is
-          used to access the raw content of the file (herein called
-                <term>RAW-URL</term>).<p><u><b>Example: OXY-URL for a File in Oxygen's User
-                Manual</b></u></p><p>Suppose that the <term>OXY-URL</term> for the
+        <li>
+          <p>It is usually different from other URLs identifying the file, such as one that would
+            open it in a CMS web interface (herein called <term>CMS-URL</term>) or the one that is
+            used to access the raw content of the file (herein called <term>RAW-URL</term>).</p>
+          <p><u><b>Example: OXY-URL for a File in Oxygen's User Manual</b></u></p>
+          <p>Suppose that the <term>OXY-URL</term> for the
               <filepath>DITA/topics/intro.dita</filepath> topic from the <term>Oxygen</term> User
             Manual (hosted on GitHub) is the
-            following:<codeblock outputclass="language-ini">gitgh://https%3A%2F%2Fgithub.com%2Foxygenxml%2Fug/master/DITA/topics/introduction.dita</codeblock></p><p>Notice
-              that:<ol id="ol_xc5_xsl_3z">
+            following:<codeblock outputclass="language-ini">gitgh://https%3A%2F%2Fgithub.com%2Foxygenxml%2Fug/master/DITA/topics/introduction.dita</codeblock></p>
+          <p>Notice that:<ol id="ol_xc5_xsl_3z">
               <li>The URL <term>scheme</term> is <b>gitgh</b>.</li>
               <li>It uniquely identifies the file <filepath>DITA/topics/introduction.dita</filepath>
                 on branch <codeph>master</codeph> in the repository <codeph>oxygenxml/ug</codeph> on
@@ -39,7 +40,8 @@
                   <codeph>https://github.com/oxygenxml/ug/blob/master/DITA/topics/introduction.dita</codeph>
                 and from the URL used to access the file's raw content (<term>RAW-URL</term>)
                   <codeph>https://raw.githubusercontent.com/oxygenxml/ug/master/DITA/topics/introduction.dita</codeph>.</li>
-            </ol></p></li>
+            </ol></p>
+        </li>
       </ol></p>
     <section id="oxyurl_unique_scheme">
       <title>Unique URL Scheme</title>
@@ -47,10 +49,12 @@
         <dl>
           <dlentry>
             <dt>GitHub</dt>
-            <dd>The URLs have the following
-              format:<codeblock outputclass="language-ini">gitgh://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></dd>
             <dd>
-              <p>where:<ul>
+              <p>The URLs have the following
+                format:<codeblock outputclass="language-ini">gitgh://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></p>
+            </dd>
+            <dd>
+              <p>where:<ul id="ul_htj_2wj_y3b">
                   <li><b>gitgh</b> = The URL scheme. Note that the <xref
                       href="webapp-integrate-github-plugin.dita#webapp-integrate-github-plugin/github_integration"
                       >GitHub plugin must be configured</xref> for this URL scheme to work.</li>
@@ -59,16 +63,19 @@
                     (URI-encoded).</li>
                   <li><b>PATH_TO_FILE</b> = The path to the file. Each entry in the path should be
                     URI-encoded.</li>
-                </ul> Example:
+                </ul></p>
+              <p>Example:
                   <filepath>gitgh://https%3A%2F%2Fgithub.com%2Fuser%2Frepo/master/DITA/topics/intro%20topic.dita</filepath></p>
             </dd>
           </dlentry>
           <dlentry>
             <dt>GitLab</dt>
-            <dd>The URLs have the following
-              format:<codeblock outputclass="language-ini">gitgl://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></dd>
             <dd>
-              <p>where:<ul>
+              <p>The URLs have the following
+                format:<codeblock outputclass="language-ini">gitgl://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></p>
+            </dd>
+            <dd>
+              <p>where:<ul id="ul_wpd_dwj_y3b">
                   <li><b>gitgl</b> = The URL scheme. Note that the <xref
                       href="webapp-integrate-github-plugin.dita#webapp-integrate-github-plugin/gitlab_integration"
                       >GitLab plugin must be configured</xref> for this URL scheme to work.</li>
@@ -77,16 +84,19 @@
                     (URI-encoded).</li>
                   <li><b>PATH_TO_FILE</b> = The path to the file. Each entry in the path should be
                     URI-encoded.</li>
-                </ul> Example:
+                </ul></p>
+              <p>Example:
                   <filepath>gitgl://https%3A%2F%2Fgithub.com%2Fuser%2Frepo/master/DITA/topics/intro%20topic.dita</filepath></p>
             </dd>
           </dlentry>
           <dlentry>
             <dt>GitLab On-Premise</dt>
-            <dd>The URLs have the following
-              format:<codeblock outputclass="language-ini">gitgle://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></dd>
             <dd>
-              <p>where:<ul>
+              <p>The URLs have the following
+                format:<codeblock outputclass="language-ini">gitgle://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></p>
+            </dd>
+            <dd>
+              <p>where:<ul id="ul_wd3_cwj_y3b">
                   <li><b>gitgle</b> = The URL scheme. Note that the <xref
                       href="webapp-integrate-github-plugin.dita#webapp-integrate-github-plugin/gitlab_integration"
                       >GitLab On-Premise plugin must be configured</xref> for this URL scheme to
@@ -97,16 +107,19 @@
                     (URI-encoded).</li>
                   <li><b>PATH_TO_FILE</b> = The path to the file. Each entry in the path should be
                     URI-encoded.</li>
-                </ul> Example:
+                </ul></p>
+              <p>Example:
                   <filepath>gitgle://https%3A%2F%2Fgitlab-example.com%2Fuser%2Frepo/master/DITA/topics/intro%20topic.dita</filepath></p>
             </dd>
           </dlentry>
           <dlentry>
             <dt>Bitbucket</dt>
-            <dd>The URLs have the following
-              format:<codeblock outputclass="language-ini">gitbb://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></dd>
             <dd>
-              <p>where:<ul>
+              <p>The URLs have the following
+                format:<codeblock outputclass="language-ini">gitbb://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></p>
+            </dd>
+            <dd>
+              <p>where:<ul id="ul_vjf_bwj_y3b">
                   <li><b>gitbb</b> = The URL scheme. Note that the <xref
                       href="webapp-integrate-github-plugin.dita#webapp-integrate-github-plugin/bitucket_integration"
                       >Bitbucket plugin must be configured</xref> for this URL scheme to work.</li>
@@ -116,32 +129,38 @@
                     (URI-encoded).</li>
                   <li><b>PATH_TO_FILE</b> = The path to the file. Each entry in the path should be
                     URI-encoded.</li>
-                </ul> Example:
+                </ul></p>
+              <p>Example:
                   <filepath>gitbb://https%3A%2F%2Fbitbucket.com%2Fuser%2Frepo/master/DITA/topics/intro%20topic.dita</filepath></p>
             </dd>
           </dlentry>
           <dlentry>
             <dt>Git</dt>
-            <dd>The URLs have the following
-              format:<codeblock outputclass="language-ini">git://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></dd>
             <dd>
-              <p>where:<ul>
+              <p>The URLs have the following
+                format:<codeblock outputclass="language-ini">git://REPOSITORY_URI/BRANCH/PATH_TO_FILE</codeblock></p>
+            </dd>
+            <dd>
+              <p>where:<ul id="ul_kmf_wvj_y3b">
                   <li><b>git</b> = The URL scheme.</li>
                   <li><b>REPOSITORY_URI</b> = The URI of the Git repository (URI-encoded).</li>
                   <li><b>BRANCH</b> = The name of the branch where the file is located
                     (URI-encoded).</li>
                   <li><b>PATH_TO_FILE</b> = The path to the file. Each entry in the path should be
                     URI-encoded.</li>
-                </ul> Example:
+                </ul></p>
+              <p>Example:
                   <filepath>git://https%3A%2F%2Fgithub.com%2Fuser%2Frepo/master/DITA/topics/intro%20topic.dita</filepath></p>
             </dd>
           </dlentry>
           <dlentry>
             <dt>WebDAV</dt>
-            <dd>The URLs have the following
-                format:<codeblock outputclass="language-ini">webdav-https://dav.box.com/dav/path/to/file.dita</codeblock><p>where
-                the WebDAV URL of the file is:
-                  <codeph>https://dav.box.com/dav/path/to/file.dita</codeph>.</p></dd>
+            <dd>
+              <p>The URLs have the following
+                format:<codeblock outputclass="language-ini">webdav-https://dav.box.com/dav/path/to/file.dita</codeblock></p>
+              <p>where the WebDAV URL of the file is:
+                  <codeph>https://dav.box.com/dav/path/to/file.dita</codeph>.</p>
+            </dd>
           </dlentry>
           <dlentry>
             <dt>SharePoint</dt>
@@ -151,28 +170,34 @@
           </dlentry>
           <dlentry>
             <dt>REST</dt>
-            <dd>The URLs have the following
-              format:<codeblock outputclass="language-ini">rest://&lt;server-id>/path/to/file.dita</codeblock>
-              The format can be further specified by the implementer of the REST API.</dd>
+            <dd>
+              <p>The URLs have the following
+                format:<codeblock outputclass="language-ini">rest://&lt;server-id>/path/to/file.dita</codeblock></p>
+              <p>The format can be further specified by the implementer of the REST API.</p>
+            </dd>
           </dlentry>
           <dlentry>
             <dt>CMIS</dt>
-            <dd>The URLs have the following
-              format:<codeblock outputclass="language-ini">cmis://SERVER-URL/repository/path/to/file.dita</codeblock>
-                  where<p><b>SERVER-URL</b> is the URL of the CMIS service document (URI-encoded).
+            <dd>
+              <p>The URLs have the following
+                format:<codeblock outputclass="language-ini">cmis://SERVER-URL/repository/path/to/file.dita</codeblock></p>
+              <p>where the <b>SERVER-URL</b> is the URL of the CMIS service document (URI-encoded).
                 For examples of such server URLs, see the <xref
                   href="wa-integrate-CMIS.dita#wa-integrate-CMIS/installing_the_plugin">CMIS
-                  connector configuration instructions</xref>.</p></dd>
+                  connector configuration instructions</xref>.</p>
+            </dd>
           </dlentry>
           <dlentry>
             <dt>Perforce</dt>
-            <dd>The URLs have the following
-              format:<codeblock outputclass="language-ini">p4java://&lt;server-address>:&lt;server-port>//&lt;depot>/path/to/file.xml</codeblock>
-                where<ul id="ul_xdz_czq_whb">
-                <li><b>server-address</b> = The domain name or IP of the server.</li>
-                <li><b>server-port</b> = The server port, usually 1666.</li>
-                <li><b>depot</b> = The name of the depot that contains the file.</li>
-              </ul></dd>
+            <dd>
+              <p>The URLs have the following
+                format:<codeblock outputclass="language-ini">p4java://&lt;server-address>:&lt;server-port>//&lt;depot>/path/to/file.xml</codeblock></p>
+              <p>where:<ul id="ul_xdz_czq_whb">
+                  <li><b>server-address</b> = The domain name or IP of the server.</li>
+                  <li><b>server-port</b> = The server port, usually 1666.</li>
+                  <li><b>depot</b> = The name of the depot that contains the file.</li>
+                </ul></p>
+            </dd>
           </dlentry>
         </dl>
       </p>
@@ -192,7 +217,7 @@
           href="https://www.oxygenxml.com/InstData/Editor/SDK/javadoc/ro/sync/ecss/extensions/api/webapp/plugin/URLStreamHandlerWithContext.html"
           format="html" scope="external"><b>URLStreamHandlerWithContext</b></xref> receives a
           <b>contextId</b> for each open and save. This <b>contextId</b> is the session ID of the
-        user for which the file will be opened or saved. <ul id="ul_amj_vcm_3z">
+        user that will open or save the file. <ul id="ul_amj_vcm_3z">
           <li>If the user is not authenticated to the CMS or if the credentials are rejected by the
             CMS, you should throw a <xref
               href="https://www.oxygenxml.com/InstData/Editor/SDK/javadoc/ro/sync/ecss/extensions/api/webapp/plugin/UserActionRequiredException.html"

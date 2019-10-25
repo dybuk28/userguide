@@ -38,20 +38,54 @@
                   <codeph>ro.sync.ecss.extensions.api.WebappCompatible</codeph> annotation.
                   <b>Author</b> mode operations that use Java Swing components to display a
                 graphical interface are not compatible with the <ph keyref="webappProduct"/> and
-                they should not be annotated.</note></dd>
+                they should not be annotated. If you want to prompt the user for input, you can use
+                the <xref href="webapp_editor_variables.dita#webapp_editor_variables/edVar-ask"
+                    ><i>${ask}</i> editor variable</xref> or use the JavaScript API.</note></dd>
           </dlentry>
           <dlentry>
             <dt>Web Author JavaScript API</dt>
-            <dd>You can use the Web Author JavaScript API to <xref keyref="jscript_api_customaction"
-                >add custom actions</xref> or <xref keyref="jscript_api_removeaction">remove actions
-                from the toolbar and contextual menu</xref>.<p>The advantages of using this approach include:<ul>
+            <dd>
+              <p>You can use the Web Author JavaScript API to <xref
+                  keyref="jscript_api_customaction">add custom actions</xref> or <xref
+                  keyref="jscript_api_removeaction">remove actions from the toolbar and contextual
+                  menu</xref>.</p>
+              <p>The advantages of using this approach include:<ul>
                   <li>You can remove any action, even standard ones.</li>
                   <li>You can remove actions from all the places where they appear in the GUI.</li>
                   <li>You can dynamically remove actions (for example, based on the user role). </li>
                   <li>You can add actions that have a web-based GUI.</li>
-                </ul></p></dd>
+                </ul></p>
+            </dd>
           </dlentry>
         </dl></p>
+        <p>The base configuration of the toolbar and contextual menu for built-in frameworks, such
+        as DITA or DocBook, can be viewed in the <xref
+          href="https://www.oxygenxml.com/doc/ug-editor/topics/the-document-type-dialog.html"
+          format="html" scope="external"><uicontrol>Document Type Configuration</uicontrol> dialog
+          box</xref>. However, there will be some differences with respect to what you see in the
+          <ph keyref="webappProduct"/> user interface:<ol id="ol_nqh_ljd_y3b">
+          <li>Some actions are added <xref
+              href="customizing_frameworks.dita#customizing_frameworks/adding_javascript_code_to_a_framework"
+              >using JavaScript code in the framework</xref>. They are present in the <ph
+              keyref="webappProduct"/> toolbar but not visible in the <xref
+              href="https://www.oxygenxml.com/doc/ug-editor/topics/the-document-type-dialog.html"
+              format="html" scope="external"><uicontrol>Document Type Configuration</uicontrol>
+              dialog box</xref>.</li>
+          <li>Some actions use an <codeph>AuthorOperation</codeph> that is not compatible with <ph
+              keyref="webappProduct"/>. They are visible in the <xref
+              href="https://www.oxygenxml.com/doc/ug-editor/topics/the-document-type-dialog.html"
+              format="html" scope="external"><uicontrol>Document Type Configuration</uicontrol>
+              dialog box</xref> but they are not present in the <ph keyref="webappProduct"/>
+            toolbar.</li>
+          <li>Some actions are not compatible with <ph keyref="webappProduct"/> as in the previous
+            case, but they are replaced with another action <xref
+              href="customizing_frameworks.dita#customizing_frameworks/adding_javascript_code_to_a_framework"
+              >using JavaScript code in the framework</xref>, which is compatible. They will appear
+            both in <ph keyref="webappProduct"/> and in the <xref
+              href="https://www.oxygenxml.com/doc/ug-editor/topics/the-document-type-dialog.html"
+              format="html" scope="external"><uicontrol>Document Type Configuration</uicontrol>
+              dialog box</xref>.</li>
+        </ol></p>
     </section>
     <section id="customizing_the_header_bar">
       <title>Customizing the Header Bar</title>
@@ -70,8 +104,8 @@
       <p>Although Web Author has a neutral theme, to better match the theme of your application, you
         can customize it by injecting a custom CSS file using JavaScript code from a plugin. The CSS
         file should also be served by your plugin using the <xref
-          href="customizing_plugins.dita#customizing_plugins"
-            ><codeph>WebappStaticResourcesFolder</codeph> extension type</xref>. </p>
+          href="customizing_plugins.dita#customizing_plugins/webapp-static-resource-folder"
+            ><codeph>WebappStaticResourcesFolder</codeph> extension type</xref>.</p>
     </section>
   </body>
 </topic>

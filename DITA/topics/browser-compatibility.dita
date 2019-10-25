@@ -23,8 +23,8 @@
       </ul></p>
     <p>As an HTML 5 application, it is likely to work on other HTML 5 compliant browsers for various
         platforms.<note>For browser versions that are released after <ph keyref="webappProduct"/>
-        version <ph keyref="minorVersion"/> is released the system administrator may have to upgrade
-        to the latest maintenance build.</note></p>
+        version <ph keyref="minorVersion"/>, the system administrator may have to upgrade to the
+        latest maintenance build.</note></p>
     <section id="known_issues">
       <title>Known Issues</title>
       <p>Due to implementation particularities, <ph keyref="webappProduct"/> may exhibit minor
@@ -52,6 +52,8 @@
           <li>On Internet Explorer, there are known performance limitations. Also, some
             non-essential features are not implemented due to browser limitations. For example,
             triple-clicking an element does not select the entire element.</li>
+          <li>In Internet Explorer, dragging and dropping content does not work. For example, you
+            cannot drag an element and drop it in another location.</li>
           <li>On Chrome, a review comment that covers only a part of a word causes ligatures to be
             decomposed at the comment's boundaries.</li>
         </ul></p>

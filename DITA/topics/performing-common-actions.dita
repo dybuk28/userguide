@@ -70,27 +70,31 @@
         <ol>
           <li>Tap or click the <uicontrol><image href="../img/Image16.gif" id="image_gqz_lzy_tr"
               />Insert Image</uicontrol> action on the toolbar.</li>
-          <li>Select the image from the file browsing dialog box that appears.<note type="tip">If
-              the image does not already exist in file structure of your repository, you can use the
-                  <uicontrol><image href="../img/WAUpload16.png"/>Upload File</uicontrol> action at
-              the top-right corner of the dialog box to upload it to the repository before selecting
-              it.</note></li>
+          <li>Select the image from the file browsing dialog box that appears. If the image does not
+            already exist in the file structure of your repository, you can use the
+                <uicontrol><image href="../img/WAUpload16.png" id="image_x32_rwd_3jb"/>Upload
+              File</uicontrol> action at the top-right corner of the dialog box to upload it to the
+            repository before selecting it.<note type="tip">You can also drag an image file from
+              another document, web page, or application (such as a system file browser) and drop it
+              into your document (in some browsers, you can also use copy/paste actions). <ph
+                keyref="webappProduct"/> will insert it as a reference to the image
+            file.</note></li>
         </ol>
       </p>
-      <p>You can also copy an image file from another document, web page, or application (such as a
-        system file browser) and paste it into your document. <ph keyref="webappProduct"/> will
-        insert it as a reference to the image file.</p>
     </section>
     <section id="set_an_attribute_value">
       <title>Set an Attribute Value</title>
       <ol>
-        <li>Select the <uicontrol>Attributes</uicontrol> tab from the panel on the right side of the
-            screen.<ph conkeyref="reusables-webapp/side-panel-ph"/><p>
+        <li>
+          <p>Select the <uicontrol>Attributes</uicontrol> tab from the panel on the right side of
+            the screen.<ph conkeyref="reusables-webapp/side-panel-ph"/></p>
+          <p>
             <fig>
               <title>Web Author Attribute Panel</title>
               <image href="../img/oxygen_webapp_attributes_panel.png"/>
             </fig>
-          </p></li>
+          </p>
+        </li>
         <li>If the attribute is present in the attributes table (it already has a value), you can
           change its value by tapping or clicking its value. On a desktop system, you can also use
               <uicontrol><shortcut>Tab</shortcut></uicontrol> or
@@ -120,7 +124,7 @@
       <title>Save a Modified XML Document</title>
       <p>To save your changes, tap or click the <uicontrol><image href="../img/WebappSave18.png"
             id="image_q3f_nwg_5r"/>Save</uicontrol> button from the upper toolbar. Note that the
-        save operation depends on the integration of the <ph keyref="webappProduct"/> with a CMS or
+        save operation depends on the integration of <ph keyref="webappProduct"/> with a CMS or
         other storage mechanism.</p>
     </section>
     <section id="search_and_replace_content">
@@ -131,12 +135,15 @@
                 id="image_ygv_lxg_5r"/>Search</uicontrol> button from the upper toolbar, or the
               <uicontrol>Search</uicontrol> tab on the right side of the screen.<ph
               conkeyref="reusables-webapp/side-panel-ph"/></li>
-          <li>The <uicontrol>Search</uicontrol> side panel is opened.<p>
+          <li>
+            <p>The <uicontrol>Search</uicontrol> side panel is opened.</p>
+            <p>
               <fig>
                 <title>Web Author Search Panel</title>
                 <image href="../img/web_author_search_panel.png"/>
               </fig>
-            </p></li>
+            </p>
+          </li>
           <li>Type the text you want to find in the <uicontrol>Search for</uicontrol> input box and
             tap or click the <uicontrol><image href="../img/WebappFind.png" id="image_nbh_ljg_wr"
               />Search</uicontrol> icon in the left side of that same input box.</li>
@@ -168,7 +175,7 @@
     </section>
     <section id="promote_demote_list_item_nodes">
       <title>Promote/Demote List Item Nodes</title>
-      <p>On a desktop device>, you can easily promote or demote selected list item nodes within
+      <p>On a desktop device, you can easily promote or demote selected list item nodes within
         ordered lists or unordered lists by using the following keyboard shortcuts:<dl>
           <dlentry>
             <dt><uicontrol>Promote (<shortcut
@@ -189,6 +196,39 @@
           </dlentry>
         </dl></p>
     </section>
+    <section id="display-xml-tags">
+      <title>Display XML Tags</title>
+      <p><ph keyref="webappProduct"/> includes a <uicontrol>Tags Display Mode</uicontrol> option
+        that you can use to display the XML tags directly in the document. To access this option,
+        select <uicontrol><image href="../img/OptionsShortcut16.png" id="image_bmc_ms5_vhb"
+          />Preferences</uicontrol> from the <uicontrol><image href="../img/WebappMore18.png"
+            id="image_utp_lhd_3jb"/>More drop-down menu</uicontrol>. You can choose from the
+        following tag modes: <uicontrol>Full Tags with Attributes</uicontrol>, <uicontrol>Full
+          Tags</uicontrol>, <uicontrol>Block Tags</uicontrol>, <uicontrol>Inline Tags</uicontrol>,
+          <uicontrol>Partial Tags</uicontrol>, or <uicontrol>No Tags</uicontrol>.</p>
+    </section>
+    <section id="section_nbk_1gd_3jb">
+      <title>Drag/Drop or Copy/Paste Tags, URLs, Images, and Static Text</title>
+      <p>If the <xref href="#performing-common-actions/display-xml-tags" format="dita"
+            ><uicontrol>Tags Display Mode</uicontrol> option</xref> is set to <uicontrol>Full Tags
+          with Attributes</uicontrol>, <uicontrol>Full Tags</uicontrol>, <uicontrol>Block
+          Tags</uicontrol>, or <uicontrol>Inline Tags</uicontrol>, you can click on a tag, copy
+            (<uicontrol><shortcut>Ctrl + C</shortcut></uicontrol>) it, and paste
+            (<uicontrol><shortcut>Ctrl + V</shortcut></uicontrol>) it within the current document or
+        another document. You can also use the mouse to drag XML tags and drop them within the
+        current document.</p>
+      <p>If you copy/paste or drag/drop a valid URL string, <ph keyref="webappProduct"/> will
+        automatically insert it as a linking element for the particular document type you are
+        working with. For example, in DITA it would insert an <xmlelement>xref</xmlelement>
+        element.</p>
+      <p>You can drag an image file from another document, web page, or application (such as a
+        system file browser) and drop it into your document (in some browsers, you can also use
+        copy/paste actions). <ph keyref="webappProduct"/> will insert it as a reference to the image
+        file.</p>
+      <p>You can also select a block of text from another document or web page and drag/drop it in
+        the current document (or copy/paste) and <ph keyref="webappProduct"/> will insert it as
+        plain text or in some cases, HTML code.</p>
+    </section>
     <section id="change_dita_map_for_dita_documents">
       <title>Change Root DITA Map (For DITA Documents)</title>
       <p>To change the root <term>DITA map</term> that is associated with the current document,
@@ -202,12 +242,6 @@
               <xref href="checking-for-errors.dita"><uicontrol>Validation</uicontrol> side
               panel</xref>. The root map is listed at the top of the side panel.</li>
         </ol></p>
-    </section>
-    <section id="copypaste_or_dragdrop_urls">
-      <title>Copy/Paste or Drag/Drop URLs</title>
-      <p>If you copy/paste or drag/drop a valid URL string, <ph keyref="webappProduct"/> will
-        automatically insert it as a linking element for the particular document type you are
-        working with. For example, in DITA it would insert an <codeph>xref</codeph> element.</p>
     </section>
   </body>
   <related-links>
